@@ -1,0 +1,234 @@
+ * {
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: verdana;
+            font-size: 0.8em;
+            background-color:darkorchid;
+        }
+
+        #header {
+            background-color: #4564d8;
+            padding: 15px;
+            text-align: center;
+            text-shadow: 2px 2px gray;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+        }
+
+       
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            transition: letter-spacing .7s
+        }
+
+        a:hover {
+            color: snow;
+            font-size: 1.2em;
+            letter-spacing: 0.6em;
+            font-weight:900;
+        }
+
+        .menuitem a:active {
+            background-color: gold;
+           
+        }
+
+        .menu {
+            float: left;
+            width: 100%;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        .menuitem {
+
+            padding: 8px;
+            width: 20%;
+            float:left;
+        }
+
+        .menuitem a{
+    
+        }
+
+        .disc {
+            float: left;
+            width: 25%;
+            margin-top: 5px;
+            line-height: 1.7em;
+            background-color: mediumorchid;
+            padding: 10px;
+
+        }
+
+        .disc ul {
+            list-style-type: none;
+            font-weight: bold;
+        }
+
+
+        .main {
+            float: right;
+            width: 50%;
+            padding: 0 20px;
+            background-color: gainsboro;
+            margin-top:5px;
+
+        }
+
+        .main p {
+            column-count: 3;
+        }
+
+        .right {
+            background-color: mediumorchid;
+            float: right;
+            width: 25%;
+            padding: 10px 15px;
+            margin-top: 5px;
+            
+           
+        }
+
+
+
+        #footer {
+            background-color: gainsboro;
+            text-align: left;
+            padding: 30px;
+            column-count:4;
+            width: 100%;
+
+        }
+        #footer h4:first-letter{
+            font-size: 200%;
+        }
+
+@media only screen and (max-width:579px){
+    
+    #footer, .right, .main, .disc, .menu, #header, body{
+    
+        width: 100%;
+    }
+    
+    .menu
+    
+    a:hover{
+    letter-spacing:0em;    
+    }
+    
+   .right{
+        margin-top: -2px;
+    }
+    
+    #footer{
+        margin-top: 4px;
+    }
+}
+
+@media only screen and (min-width:580px) and (max-width:767px){
+    
+    body{
+        background-color:indianred;
+    }
+    
+    .menu{
+        width: 100%;
+        
+    }
+
+    .menuitem{
+        float: left;
+        width: 20%;
+    }
+    
+    .menuitem a{
+        font-size:100%;
+    }
+    
+
+    a:hover {
+        color: snow;
+        font-size: 100%;
+        letter-spacing: 0em;
+        font-weight:900;
+        }
+    .disc{
+        margin-top: 5px;
+        width: 74%;
+        float:left;
+        height:70%;
+    }
+    
+    .main{
+        width: 74%;
+        float:left;
+    }
+    .right{
+        width: 25%;
+        float:right;
+    }
+    
+    #footer{
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (min-width:768px) and (max-width:1080px){
+    
+    body{
+        background-color:orange;
+    }
+    
+    .menu{
+        width: 100%;
+        
+    }
+
+    .menuitem{
+        float: left;
+        width: 20%;
+    }
+    
+    .menuitem a{
+        font-size:100%;
+    }
+    
+
+    a:hover {
+        color: snow;
+        font-size: 100%;
+        letter-spacing: 0.5em;
+        font-weight:900;
+        }
+    .disc{
+        margin-top: 5px;
+        width: 70%;
+        float:right;
+        height:70%;
+    }
+    
+    .main{
+        width: 74%;
+        float:right;
+    }
+    .right{
+        width: 25%;
+        float:left;
+    }
+    
+    #footer{
+        width: 100%;
+    }
+    
+}
+
