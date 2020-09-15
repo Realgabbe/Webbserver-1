@@ -4,6 +4,9 @@ const port = 3000
 
 const clientDir = __dirname + "\\client\\"
 
+app.use(express.json())
+app.use(express.urlencoded())
+
 app.get('/', (req, res) => res.sendFile(clientDir + "index.html"))    
 
 app.get('/kiss', (req, res) => {
@@ -17,5 +20,11 @@ app.get('/dp', (req, res) => {
 app.get('/inrock', (req, res) => {
    res.sendFile(clientDir + 'inrock.jpg')
 })  
+
+app.post('/', (req, res) => {
+  console.log(req.body.name)
+  console.log(req.body.email)
+  res.redirect('/')
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
