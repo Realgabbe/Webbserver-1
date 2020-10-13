@@ -7,6 +7,13 @@ const clientDir = __dirname + "\\client\\"
 app.use(express.json())
 app.use(express.urlencoded())
 
+const personSchema = new mongoose.Schema({
+  name: String,
+  email: String
+});
+
+const Person = mongoose.model('Person', personSchema);
+
 app.get('/', (req, res) => res.sendFile(clientDir + "index.html"))    
 
 app.get('/kiss', (req, res) => {
