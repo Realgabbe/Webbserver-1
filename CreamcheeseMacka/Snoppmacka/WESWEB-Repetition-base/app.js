@@ -21,10 +21,11 @@ app.use(express.urlencoded())
 app.set('view engine' , 'ejs')
 
 //Lyssnar på GET requests på addressen <domain>/
-app.get('/', (req, res) => {
-    //rendera sidan index.ejs
-  res.render('pages/index.ejs')
-})
+app.get('/', async (req, res) => {
+  //rendera sidan index.ejs
+  const messages = await MessageModel.getAllMessages();
+  res.render('pages/index.ejs', { messages: messages});
+});
 
 app.get('/products', (req, res) => {
   res.render('pages/products.ejs')
@@ -51,14 +52,13 @@ app.get('/hoangsite', (req, res) => {
 })
 
 //Lyssnar på POST requests på addressen <domain>/
-app.post('/', function (req, res) {
+app.post("/", async (req, res) => {
     //Skapa ett Message objekt
-    const message = MessageModel.createMessage(req.body.email, req.body.message)
+    const message = MessageModel.createMessage(req.body.email, req.body.message);
     //spara elementet Message i databasen
-    dbModule.storeElement(message)
-
+    await dbModule.storeElement(message);
     //Omdirigera klienten till huvudsidan
-    res.redirect('/')
+    res.redirect('/');
 })
 
 //Sätt igång servern så att den kan ta emot requests på vald port.

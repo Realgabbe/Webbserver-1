@@ -40,9 +40,16 @@
 
       <form action="/" method="post">
         <input type="email" name="email" placeholder="example@email.com">
-        <input type="message" name="message" placeholder="input högkvalitativa messages here">
-        <input type="submit" value="Posta det">
+        <input type="type" name="message" placeholder="input högkvalitativa messages here">
+        <button type="submit">Posta det </button>
       </form>
+
+      <% for( let i=0; i < messages.length; i++ ) { %>
+        <div>
+          <p>message.email</p>
+          <p>message.text</p>
+        </div>
+      <% } %>
 
      <!-- Footer -->
         <footer class="page-footer font-small blue pt-4 bg-light">

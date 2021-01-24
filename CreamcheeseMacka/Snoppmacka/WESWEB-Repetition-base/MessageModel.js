@@ -7,7 +7,6 @@ const messageSchema = new mongoose.Schema({
 
 const Message = mongoose.model('Message', messageSchema);
 
-
 exports.createMessage = (inMail, inText) => {
     var message = new Message({
         email: inMail,
@@ -15,4 +14,8 @@ exports.createMessage = (inMail, inText) => {
     })
 
     return message
-}
+};
+
+exports.getAllMessages = async () => {
+    return await Message.find({});
+};
