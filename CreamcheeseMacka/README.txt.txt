@@ -1,2 +1,2 @@
-Creamcheese macka med smör :)
+Creamcheese macka med smÃ¶r :)
 
